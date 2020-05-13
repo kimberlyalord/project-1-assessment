@@ -13,16 +13,20 @@ addButton.addEventListener('click', addInteger);
 
 subtractButton.addEventListener('click', subtractInteger);
 
+function changeColor() {
+    if(total < 0) {   
+        counter.style.color = 'red';
+    } else counter.style.color = 'black';
+}
+
 function addInteger() {
     total += parseInt(input.value);
     counter.innerHTML = total;
+    changeColor();
 }
 
 function subtractInteger() {
     total -= parseInt(input.value);
     counter.innerHTML = total;
+    changeColor();
 }
-
-// if(total < 0) {   
-//     counter.innerHTML.style.color = "red";
-// }
